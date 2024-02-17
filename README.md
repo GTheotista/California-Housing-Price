@@ -54,6 +54,7 @@ Menjelaskan makna dan signifikansi setiap fitur yaitu:
 - Median House Value (FItur Target): Nilai median rumah di daerah tersebut, yang merupakan nilai tengah dari harga rumah di daerah tersebut.
 <br>
 Dari penjelasan fitur target sebelumnya, dapat disimpulkan permasalahan ini dapat dipecahkan dengan model regresi
+<br>
 
 <br>
 

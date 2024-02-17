@@ -115,21 +115,21 @@ Setelah proses tuning hiperparameter, saya membandingkan kinerja model XGBoost s
 
 **Conclusion**
 
-Evaluasi Model:
+**Evaluasi Model:**
 - Model yang dibangun adalah model yang menggunakan fitur-x: longitude, latitude, housing_median_age, total_rooms	total_bedrooms, population, households, median_income,  dan Ocean Proximity: Near Ocean, Ocean Proximity: Inland, Ocean Proximity: Island, Ocean Proximity: Near Bay, dan Ocean Proximity: <1H Ocean terhadap fitur target-y: median_house_value.
 - Model yang dibangun adalah model dengan batasan fitur-x longitude: -124.35 s/d -114.55, latitude: 32.54 s/d 41.95, housing_median_age: 1 s/d 52, total_rooms: 2 s/d 5688, total_bedrooms: 2 s/d 1168, population: 3 s/d 3134, households: 2 s/d 1091, median_income: 0.4999 s/d 7.9794,  dan Ocean Proximity: Near Ocean, Ocean Proximity: Inland, Ocean Proximity: Island, Ocean Proximity: Near Bay, dan Ocean Proximity: <1H Ocean terhadap fitur target-y median_house_value: 14999-480100.
 - Meskipun RMSE dan MAE model cukup besar, hal ini dapat diterima mengingat rentang nilai target 'Median_House_Value' yang besar 14999-480100 (range 465101). Besarnya nilai-nilai tersebut sesuai dengan skala keseluruhan masalah prediksi harga rumah.
 - MAPE yang rendah sebesar 17% menunjukkan bahwa model memiliki tingkat akurasi yang tinggi dalam memprediksi harga rumah. Model mampu memperkirakan nilai aktual dengan kesalahan yang kecil dalam persentase. dengan menggunakan model ini maka perkiraan harganya rata-rata akan meleset kurang lebih sebesar 17% dari harga seharusnya.
 - Tidak menutup kemungkinan juga prediksinya meleset lebih jauh (terutama ketika harga aktual lebih dari 400000) karena bias yang dihasilkan model masih cukup tinggi bila dilihat dari visualisasi antara harga aktual dan prediksi. Bias yang dihasilkan oleh model ini dikarenakan oleh terbatasnya fitur pada dataset yang bisa merepresentasikan aspek properti lainnya seperti Rasio Kamar Tidur terhadap Jumlah Kamar, Luas Bangunan per Luas Tanah, Fasilitas Umum di Sekitar, dan lain-lain. 
 
-Mengikuti Pola Garis Lurus dalam Plot Nilai Prediksi dan Nilai Aktual:
+**Mengikuti Pola Garis Lurus dalam Plot Nilai Prediksi dan Nilai Aktual:**
 - Adanya pola garis lurus dalam plot antara nilai prediksi dan nilai aktual menunjukkan bahwa model memiliki kemampuan yang baik dalam menyesuaikan diri dengan pola data. Ini mengindikasikan bahwa model secara konsisten dapat memprediksi harga rumah dengan tingkat kesalahan yang seragam.
 
-Feature Importance:
+**Feature Importance:**
 - Lima fitur terbesar yang mempengaruhi prediksi harga rumah adalah 'Ocean Proximity: Inland', 'Median Income', 'Longitude', 'Latitude', dan 'Ocean Proximity: Near Ocean'.
 - 'Median Income' memiliki tingkat penting tinggi, menunjukkan bahwa pendapatan tengah rumah tangga di suatu daerah adalah faktor kunci dalam memprediksi harga rumah. Semakin tinggi pendapatan, semakin besar kemungkinan harga rumah lebih tinggi.
 
-Kesimpulan:
+**Kesimpulan:**
 - Kesimpulan keseluruhan adalah bahwa model dapat dianggap baik dalam memprediksi harga rumah yang tentunya sesuai pada batasan fitur yang telah disebutkan sebelumnya, jika data yang diprediksi lebih / kurang dari batasan yang telah dijelaskan sebelumnya maka model tidak akan memprediksi dengan baik.
 - Perhatian khusus pada Ocean Proximity: Inland, 'Median Income' di area tersebut,Longitude, Latitude, dan Ocean Proximity: Near Ocean sebagai 5 faktor utama yang mempengaruhi harga properti jika seseorang memiliki rencana untuk membeli rumah yang sesuai dengan budget dan tidak overprice, serta kepada pengusaha agar tidak menjual dengan overprice / underprice yang keduanya dapat menurunkan pendapatan (overprice menyebabkan konsumen tidak jadi membeli dan underprice harga jauh di bawah market). 
 

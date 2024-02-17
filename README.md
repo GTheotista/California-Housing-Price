@@ -1,19 +1,19 @@
 # **California Housing Price**
 
-**Tools:** Python & Tableau<br>
-**Visualizations:** Python(Matplotlib/Seaborn) & Tableau<br> 
-**Dataset:** Supermarket Customers
+**Tools:** Python <br>
+**Visualizations:** Python(Matplotlib/Seaborn)<br> 
+**Dataset:** California Housing Price
 
 **Table of Contents:**
 
-- [**Supermarket Customers Analysis**](#California Housing Price)
+- [**Supermarket Customers Analysis**](#California-Housing-Price)
 - [**Langkah 0: Business Problem Understanding**](#Langkah-0-Business-Problem-Understanding)
 - [**Langkah 1: Data Understanding**](#Langkah-1-Data-Understanding)
 - [**Langkah 2: Data Preprocessing**](#Langkah-2-Data-Preprocessing)
 - [**Langkah 3: Modeling**](#Langkah-3-Modeling)
 - [**Langkah 4: Conclusion And Recommendations**](#Langkah-4-Conclusion-And-Recommendations)
 - [**Langkah 5: Save Model**](#Langkah-5-Save-Model)
-- 
+
 ---
 
 # **Langkah 0: Business Problem Understanding**

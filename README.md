@@ -53,8 +53,9 @@ Menjelaskan makna dan signifikansi setiap fitur yaitu:
 - Ocean Proximity: Informasi tentang seberapa dekat suatu rumah dengan pantai atau lautan, dapat berupa kategori seperti "dekat laut", "pantai", dll.
 - Median House Value (FItur Target): Nilai median rumah di daerah tersebut, yang merupakan nilai tengah dari harga rumah di daerah tersebut.
 <br>
-Dari penjelasan fitur target sebelumnya, dapat disimpulkan permasalahan ini dapat dipecahkan dengan model regresi
+Dari penjelasan fitur target sebelumnya, dapat disimpulkan permasalahan ini dapat dipecahkan dengan **model regresi**
 <br>
+
 **Pengecekan Nilai Unik dalam Kolom 'Ocean Proximity'**
 Melakukan pengecekan terhadap nilai unik dalam kolom kategoris 'ocean_proximity', memberikan wawasan tentang distribusi kategori kedekatan dengan laut.
 

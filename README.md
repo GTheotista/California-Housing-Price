@@ -2,7 +2,7 @@
 
 **Tools:** Python <br>
 **Visualizations:** Python(Matplotlib/Seaborn)<br> 
-**Dataset:** California Housing Price
+**Dataset:** [California Housing Price](https://github.com/GTheotista/Purwadhika-Capstone3/blob/main/data_california_house.csv)
 
 **Table of Contents:**
 

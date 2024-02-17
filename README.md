@@ -72,6 +72,38 @@ Menangani pencilan untuk berbagai fitur seperti 'median_house_value,' 'total_roo
 
 ---
 
-# **Langkah 2: Data Preprocessing**
+# **Langkah 3: Modeling**
 
 ---
+
+**Penentuan Variabel (X) dan Variabel Target (y)**
+Dalam pembangunan model ini, variabel independen (X) yang saya pilih melibatkan koordinat geografis, usia rata-rata perumahan, jumlah kamar, populasi, jumlah rumah tangga, pendapatan rata-rata, dan informasi kedekatan dengan laut. Variabel dependen (y) yang ingin saya prediksi adalah nilai median rumah di daerah tersebut ('median_house_value').
+
+**Encoding**
+Untuk memproses data kategoris, khususnya kolom 'ocean_proximity', saya menerapkan proses one hot encoding. Ini dilakukan agar model dapat memahami dan menggunakan informasi ini dalam proses pembelajaran.
+
+**Pembagian Data**
+Data saya bagi menjadi dua set utama: data latih (train set) dan data uji (test set). Data latih digunakan untuk melatih model, sedangkan data uji digunakan untuk mengevaluasi kinerja model yang sudah dilatih.
+
+**Pemilihan Model Benchmark**
+Saya memilih beberapa model regresi sebagai benchmark untuk memahami performa dasar sebelum melakukan peningkatan. Model-model tersebut melibatkan:
+- Linear Regression
+- K-Nearest Neighbors (KNN)
+- Decision Tree
+- Random Forest
+- XGBoost
+
+**Scaling**
+Sebelum melatih model, saya melakukan proses scaling pada data. Pemilihan scaler dapat disesuaikan, antara Min-Max Scaler dan Standard Scaler, berdasarkan evaluasi kinerja model.
+
+**Pemilihan Model Terbaik**
+Setelah melatih semua model benchmark, saya mengevaluasi kinerja masing-masing model menggunakan metrik seperti Root Mean Squared Error (RMSE), Mean Absolute Error (MAE), dan Mean Absolute Percentage Error (MAPE). Berdasarkan evaluasi tersebut, model terbaik yang dipilih adalah XGBoost Regressor.
+
+**Tuning Hiperparameter pada XGBoost**
+Saya melakukan tuning hiperparameter pada model XGBoost untuk meningkatkan performa lebih lanjut. Proses ini melibatkan eksplorasi kombinasi parameter menggunakan GridSearchCV untuk menemukan kombinasi terbaik.
+
+**Evaluasi Kinerja Model Setelah Tuning**
+Setelah proses tuning hiperparameter, saya membandingkan kinerja model XGBoost sebelum dan sesudah tuning menggunakan metrik RMSE, MAE, dan MAPE. Dapat disimpulkan bahwa tunning berjalan dengan baik karena menghasilkan RMSE, MAE, dan MAPE yang lebih kecil.
+
+**Kesimpulan**
+Dengan menggunakan model XGBoost dan melakukan tuning hiperparameter, saya berhasil menghasilkan model yang dapat memberikan prediksi harga properti dengan tingkat akurasi yang lebih tinggi. Meskipun terdapat batasan dalam nilai RMSE dan MAE yang cukup besar, MAPE yang rendah menunjukkan bahwa model mampu memberikan estimasi harga properti dengan tingkat kesalahan yang kecil. Pemahaman fitur penting juga memberikan wawasan yang berharga bagi konsumen dan pengusaha properti untuk membuat keputusan yang lebih informasional dan tepat.

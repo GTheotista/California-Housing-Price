@@ -30,7 +30,7 @@ Dalam dinamika kompleks pasar perumahan, konsumen berusaha untuk mendapatkan nil
 - Keberlanjutan Bisnis: Membantu pengusaha perumahan menetapkan harga yang seimbang, mengurangi risiko overpricing dan underpricing, serta menciptakan hubungan yang berkelanjutan dengan konsumen.
 
 **Analytics Approach**
-- Model Regresi Machine Learning: Membangun model regresi machine learning untuk memprediksi harga properti berdasarkan faktor-faktor seperti lokasi geografis, usia perumahan, jumlah kamar, dan lainnya.
+- Model Regresi Machine Learning: Membangun model regresi machine learning untuk memprediksi harga properti berdasarkan faktor-faktor seperti lokasi geografis, populasi, jumlah kamar, dan lainnya.
 - Analisis Pentingnya Fitur: Melakukan analisis terhadap faktor-faktor yang memiliki dampak signifikan terhadap harga properti, sehingga konsumen dapat memahami dengan lebih baik faktor-faktor yang mempengaruhi harga properti.
 - Optimasi Strategi Harga: Menggunakan model untuk membantu pengusaha mengoptimalkan strategi penetapan harga, memastikan bahwa harga yang ditawarkan mencerminkan nilai sebenarnya dari properti tanpa mengalami overpricing atau underpricing.
 

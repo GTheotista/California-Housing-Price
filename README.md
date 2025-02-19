@@ -6,7 +6,6 @@
 
 **Table of Contents:**
 
-- [**Supermarket Customers Analysis**](#California-Housing-Price)
 - [**Step 0: Business Problem Understanding**](#Step-0-Business-Problem-Understanding)
 - [**Step 1: Data Understanding**](#Step-1-Data-Understanding)
 - [**Step 2: Data Preprocessing**](#Step-2-Data-Preprocessing)

@@ -1,98 +1,95 @@
 # **California Housing Price**
 
 **Tools:** Python <br>
-**Visualizations:** Python (Matplotlib/Seaborn)<br> 
+**Visualizations:** Python (Matplotlib/Seaborn)<br>
 **Dataset:** [California Housing Price](https://github.com/GTheotista/Purwadhika-Capstone3/blob/main/data_california_house.csv)
 
 **Table of Contents:**
 
 - [**Supermarket Customers Analysis**](#California-Housing-Price)
-- [**Langkah 0: Business Problem Understanding**](#Langkah-0-Business-Problem-Understanding)
-- [**Langkah 1: Data Understanding**](#Langkah-1-Data-Understanding)
-- [**Langkah 2: Data Preprocessing**](#Langkah-2-Data-Preprocessing)
-- [**Langkah 3: Modeling**](#Langkah-3-Modeling)
-- [**Langkah 4: Conclusion And Recommendations**](#Langkah-4-Conclusion-And-Recommendations)
-- [**Langkah 5: Save Model**](#Langkah-5-Save-Model)
+- [**Step 0: Business Problem Understanding**](#Step-0-Business-Problem-Understanding)
+- [**Step 1: Data Understanding**](#Step-1-Data-Understanding)
+- [**Step 2: Data Preprocessing**](#Step-2-Data-Preprocessing)
+- [**Step 3: Modeling**](#Step-3-Modeling)
+- [**Step 4: Conclusion And Recommendations**](#Step-4-Conclusion-And-Recommendations)
+- [**Step 5: Save Model**](#Step-5-Save-Model)
 
 ---
 
-# **Langkah 0: Business Problem Understanding**
+# **Step 0: Business Problem Understanding**
 
 ---
-Dalam dinamika kompleks pasar perumahan, konsumen berusaha untuk mendapatkan nilai terbaik untuk investasi mereka, sementara pengusaha properti bertujuan untuk menjaga profitabilitas dan pertumbuhan bisnis. Praktik overpricing dapat merugikan kepercayaan konsumen, sementara underpricing dapat menghambat pertumbuhan bisnis dan menyebabkan kerugian finansial.
+In the complex dynamics of the housing market, consumers strive to get the best value for their investments, while real estate entrepreneurs aim to maintain profitability and business growth. Overpricing can damage consumer trust, while underpricing can hinder business growth and lead to financial losses.
 
 **Problem Statement**
-- Perspektif Konsumen: Konsumen sering mengalami ketidakpastian dalam menilai apakah harga properti mencerminkan nilai sebenarnya. Keinginan untuk menghindari pembelian dengan harga yang tidak sesuai dengan nilai properti menjadi kendala utama dalam pengambilan keputusan.
-- Perspektif Bisnis: Pengusaha perumahan menghadapi tantangan menetapkan harga yang seimbang. Overpricing dapat menghambat penjualan dan merugikan reputasi, sementara underpricing dapat menyebabkan kerugian finansial dan pertumbuhan bisnis yang terbatas.
+- **Consumer Perspective:** Consumers often face uncertainty in assessing whether a property's price reflects its actual value. Avoiding overpriced purchases is a key challenge in decision-making.
+- **Business Perspective:** Real estate entrepreneurs struggle to set balanced prices. Overpricing can hinder sales and damage reputation, while underpricing can cause financial losses and limit business growth.
 
 **Goals**
-- Pemberdayaan Konsumen: Memberdayakan konsumen dengan informasi yang akurat dan transparan mengenai faktor-faktor yang mempengaruhi harga properti, sehingga mereka dapat membuat keputusan pembelian yang lebih cerdas.
-- Keberlanjutan Bisnis: Membantu pengusaha perumahan menetapkan harga yang seimbang, mengurangi risiko overpricing dan underpricing, serta menciptakan hubungan yang berkelanjutan dengan konsumen.
+- **Consumer Empowerment:** Provide consumers with accurate and transparent information about factors influencing property prices, enabling them to make informed purchasing decisions.
+- **Business Sustainability:** Assist real estate entrepreneurs in setting balanced prices, reducing the risks of overpricing and underpricing, and fostering sustainable relationships with consumers.
 
 **Analytics Approach**
-- Model Regresi Machine Learning: Membangun model regresi machine learning untuk memprediksi harga properti berdasarkan faktor-faktor seperti lokasi geografis, populasi, jumlah kamar, dan lainnya.
-- Analisis Pentingnya Fitur: Melakukan analisis terhadap faktor-faktor yang memiliki dampak signifikan terhadap harga properti, sehingga konsumen dapat memahami dengan lebih baik faktor-faktor yang mempengaruhi harga properti.
-- Optimasi Strategi Harga: Menggunakan model untuk membantu pengusaha mengoptimalkan strategi penetapan harga, memastikan bahwa harga yang ditawarkan mencerminkan nilai sebenarnya dari properti tanpa mengalami overpricing atau underpricing.
+- **Machine Learning Regression Model:** Build a regression model to predict property prices based on factors such as geographic location, population, number of rooms, and more.
+- **Feature Importance Analysis:** Analyze the significant factors affecting property prices, helping consumers better understand price determinants.
+- **Price Strategy Optimization:** Use the model to help entrepreneurs optimize pricing strategies, ensuring that offered prices reflect actual property value without overpricing or underpricing.
 
 ---
 
-# **Langkah 1: Data Understanding**
+# **Step 1: Data Understanding**
 
 ---
 
-**Penjelasan Fitur**
-Menjelaskan makna dan signifikansi setiap fitur yaitu:
-- Longitude: Merupakan koordinat geografis yang menunjukkan lokasi timur atau barat suatu titik pada peta bumi.
-- Latitude: Merupakan koordinat geografis yang menunjukkan lokasi utara atau selatan suatu titik pada peta bumi.
-- Housing Median Age: Merupakan usia rata-rata perumahan di daerah tersebut, diukur dalam tahun.
-- Total Rooms: Jumlah total kamar di semua rumah di daerah tersebut.
-- Total Bedrooms: Jumlah total kamar tidur di semua rumah di daerah tersebut.
-- Population: Jumlah total penduduk di daerah tersebut.
-- Households: Jumlah kepala keluarga atau rumah tangga di daerah tersebut.
-- Median Income: Pendapatan rata-rata rumah tangga di daerah tersebut.
-- Ocean Proximity: Informasi tentang seberapa dekat suatu rumah dengan pantai atau lautan, dapat berupa kategori seperti "dekat laut", "pantai", dll.
-- Median House Value (FItur Target): Nilai median rumah di daerah tersebut, yang merupakan nilai tengah dari harga rumah di daerah tersebut.
-<br>
-Dari penjelasan fitur target sebelumnya, dapat disimpulkan permasalahan ini dapat dipecahkan dengan model regresi
-<br>
+**Feature Explanation**
+Explaining the meaning and significance of each feature:
+- **Longitude:** Geographic coordinate indicating east-west location.
+- **Latitude:** Geographic coordinate indicating north-south location.
+- **Housing Median Age:** Average age of houses in the area (years).
+- **Total Rooms:** Total number of rooms in all houses in the area.
+- **Total Bedrooms:** Total number of bedrooms in all houses in the area.
+- **Population:** Total number of residents in the area.
+- **Households:** Number of households in the area.
+- **Median Income:** Median household income in the area.
+- **Ocean Proximity:** Information on how close a house is to the ocean (e.g., "Near Ocean," "Inland," etc.).
+- **Median House Value (Target Feature):** Median house value in the area.
 
-<br>
+From the target feature explanation, this problem can be solved using a regression model.
 
-**Pengecekan Nilai Unik dalam Kolom 'Ocean Proximity'**
-Melakukan pengecekan terhadap nilai unik dalam kolom kategoris 'ocean_proximity', memberikan wawasan tentang distribusi kategori kedekatan dengan laut.
+**Checking Unique Values in 'Ocean Proximity' Column**
+Examining unique values in the categorical column 'ocean_proximity' to gain insight into proximity-to-ocean category distribution.
 
-**Korelasi Data dan Distribusi**
-Memeriksa korelasi antara fitur-fitur dan variabel target, visualisasi distribusi data melalui pair plot dan heatmap. Diketahui bahwa 'median_income' menunjukkan korelasi yang kuat dengan 'median_house_value.'
+**Data Correlation and Distribution**
+Checking the correlation between features and the target variable, visualizing data distribution through pair plots and heatmaps. It is found that 'median_income' strongly correlates with 'median_house_value.'
 
 ---
 
-# **Langkah 2: Data Preprocessing**
+# **Step 2: Data Preprocessing**
 
 ---
 
-**Missing Value**
-Mengonfirmasi adanya nilai yang hilang dalam dataset, penanganan missing value dilakukan dengan imputation by median karena datanya tidak normal
+**Missing Value Handling**
+Confirming missing values in the dataset, handling missing values using median imputation due to data non-normality.
 
-**Outlier**
-Menangani pencilan untuk berbagai fitur seperti 'median_house_value,' 'total_rooms,' 'population,' 'households,' dan 'median_income.'
-
----
-
-# **Langkah 3: Modeling**
+**Outlier Handling**
+Handling outliers for various features such as 'median_house_value,' 'total_rooms,' 'population,' 'households,' and 'median_income.'
 
 ---
 
-**Penentuan Variabel (X) dan Variabel Target (y)**
-Dalam pembangunan model ini, variabel independen (X) yang saya pilih melibatkan koordinat geografis, usia rata-rata perumahan, jumlah kamar, populasi, jumlah rumah tangga, pendapatan rata-rata, dan informasi kedekatan dengan laut. Variabel dependen (y) yang ingin saya prediksi adalah nilai median rumah di daerah tersebut ('median_house_value').
+# **Step 3: Modeling**
+
+---
+
+**Defining Variables (X) and Target Variable (y)**
+For model development, the independent variables (X) include geographic coordinates, median housing age, number of rooms, population, number of households, median income, and ocean proximity information. The dependent variable (y) is the median house value ('median_house_value').
 
 **Encoding**
-Untuk memproses data kategoris, khususnya kolom 'ocean_proximity', saya menerapkan proses one hot encoding. Ini dilakukan agar model dapat memahami dan menggunakan informasi ini dalam proses pembelajaran.
+Applying one-hot encoding to process categorical data, particularly the 'ocean_proximity' column, allowing the model to understand and utilize this information in learning.
 
-**Pembagian Data**
-Data saya bagi menjadi dua set utama: data latih (train set) dan data uji (test set). Data latih digunakan untuk melatih model, sedangkan data uji digunakan untuk mengevaluasi kinerja model yang sudah dilatih.
+**Data Splitting**
+Splitting data into training and testing sets, with the training set used for model training and the test set for evaluation.
 
-**Pemilihan Model Benchmark**
-Saya memilih beberapa model regresi sebagai benchmark untuk memahami performa dasar sebelum melakukan peningkatan. Model-model tersebut melibatkan:
+**Benchmark Model Selection**
+Selecting multiple regression models as benchmarks to establish a baseline before improvement:
 - Linear Regression
 - K-Nearest Neighbors (KNN)
 - Decision Tree
@@ -100,60 +97,38 @@ Saya memilih beberapa model regresi sebagai benchmark untuk memahami performa da
 - XGBoost
 
 **Scaling**
-Sebelum melatih model, saya melakukan proses scaling pada data. Pemilihan scaler dapat disesuaikan, antara Min-Max Scaler dan Standard Scaler, berdasarkan evaluasi kinerja model.
+Applying feature scaling before training, choosing between Min-Max Scaler and Standard Scaler based on model performance evaluation.
 
-**Pemilihan Model Terbaik**
-Setelah melatih semua model benchmark, saya mengevaluasi kinerja masing-masing model menggunakan metrik seperti Root Mean Squared Error (RMSE), Mean Absolute Error (MAE), dan Mean Absolute Percentage Error (MAPE). Berdasarkan evaluasi tersebut, model terbaik yang dipilih adalah XGBoost Regressor.
+**Best Model Selection**
+Evaluating each model using metrics such as Root Mean Squared Error (RMSE), Mean Absolute Error (MAE), and Mean Absolute Percentage Error (MAPE). The best model selected is XGBoost Regressor.
 
-**Tuning Hiperparameter pada XGBoost**
-Saya melakukan tuning hiperparameter pada model XGBoost untuk meningkatkan performa lebih lanjut. Proses ini melibatkan eksplorasi kombinasi parameter menggunakan GridSearchCV untuk menemukan kombinasi terbaik.
+**Hyperparameter Tuning for XGBoost**
+Performing hyperparameter tuning using GridSearchCV to find the best parameter combinations for performance improvement.
 
-**Evaluasi Kinerja Model Setelah Tuning**
-Setelah proses tuning hiperparameter, saya membandingkan kinerja model XGBoost sebelum dan sesudah tuning menggunakan metrik RMSE, MAE, dan MAPE. Dapat disimpulkan bahwa tunning berjalan dengan baik karena menghasilkan RMSE, MAE, dan MAPE yang lebih kecil.
-
+**Post-Tuning Model Evaluation**
+Comparing the performance of XGBoost before and after tuning using RMSE, MAE, and MAPE, concluding that tuning improves model performance.
 
 ---
 
-# **Langkah 4: Conclusion And Recommendations**
+# **Step 4: Conclusion And Recommendations**
 
 ---
 
 **Conclusion**
-
-**Evaluasi Model:**
-- Model yang dibangun adalah model yang menggunakan fitur-x: longitude, latitude, housing_median_age, total_rooms	total_bedrooms, population, households, median_income,  dan Ocean Proximity: Near Ocean, Ocean Proximity: Inland, Ocean Proximity: Island, Ocean Proximity: Near Bay, dan Ocean Proximity: <1H Ocean terhadap fitur target-y: median_house_value.
-- Model yang dibangun adalah model dengan batasan fitur-x longitude: -124.35 s/d -114.55, latitude: 32.54 s/d 41.95, housing_median_age: 1 s/d 52, total_rooms: 2 s/d 5688, total_bedrooms: 2 s/d 1168, population: 3 s/d 3134, households: 2 s/d 1091, median_income: 0.4999 s/d 7.9794,  dan Ocean Proximity: Near Ocean, Ocean Proximity: Inland, Ocean Proximity: Island, Ocean Proximity: Near Bay, dan Ocean Proximity: <1H Ocean terhadap fitur target-y median_house_value: 14999-480100.
-- Meskipun RMSE dan MAE model cukup besar, hal ini dapat diterima mengingat rentang nilai target 'Median_House_Value' yang besar 14999-480100 (range 465101). Besarnya nilai-nilai tersebut sesuai dengan skala keseluruhan masalah prediksi harga rumah.
-- MAPE yang rendah sebesar 17% menunjukkan bahwa model memiliki tingkat akurasi yang tinggi dalam memprediksi harga rumah. Model mampu memperkirakan nilai aktual dengan kesalahan yang kecil dalam persentase. dengan menggunakan model ini maka perkiraan harganya rata-rata akan meleset kurang lebih sebesar 17% dari harga seharusnya.
-- Tidak menutup kemungkinan juga prediksinya meleset lebih jauh (terutama ketika harga aktual lebih dari 400000) karena bias yang dihasilkan model masih cukup tinggi bila dilihat dari visualisasi antara harga aktual dan prediksi. Bias yang dihasilkan oleh model ini dikarenakan oleh terbatasnya fitur pada dataset yang bisa merepresentasikan aspek properti lainnya seperti Rasio Kamar Tidur terhadap Jumlah Kamar, Luas Bangunan per Luas Tanah, Fasilitas Umum di Sekitar, dan lain-lain. 
-
-**Mengikuti Pola Garis Lurus dalam Plot Nilai Prediksi dan Nilai Aktual:**
-- Adanya pola garis lurus dalam plot antara nilai prediksi dan nilai aktual menunjukkan bahwa model memiliki kemampuan yang baik dalam menyesuaikan diri dengan pola data. Ini mengindikasikan bahwa model secara konsisten dapat memprediksi harga rumah dengan tingkat kesalahan yang seragam.
-
-**Feature Importance:**
-- Lima fitur terbesar yang mempengaruhi prediksi harga rumah adalah 'Ocean Proximity: Inland', 'Median Income', 'Longitude', 'Latitude', dan 'Ocean Proximity: Near Ocean'.
-- 'Median Income' memiliki tingkat penting tinggi, menunjukkan bahwa pendapatan tengah rumah tangga di suatu daerah adalah faktor kunci dalam memprediksi harga rumah. Semakin tinggi pendapatan, semakin besar kemungkinan harga rumah lebih tinggi.
-
-**Kesimpulan:**
-- Kesimpulan keseluruhan adalah bahwa model dapat dianggap baik dalam memprediksi harga rumah yang tentunya sesuai pada batasan fitur yang telah disebutkan sebelumnya, jika data yang diprediksi lebih / kurang dari batasan yang telah dijelaskan sebelumnya maka model tidak akan memprediksi dengan baik.
-- Perhatian khusus pada Ocean Proximity: Inland, 'Median Income' di area tersebut,Longitude, Latitude, dan Ocean Proximity: Near Ocean sebagai 5 faktor utama yang mempengaruhi harga properti jika seseorang memiliki rencana untuk membeli rumah yang sesuai dengan budget dan tidak overprice, serta kepada pengusaha agar tidak menjual dengan overprice / underprice yang keduanya dapat menurunkan pendapatan (overprice menyebabkan konsumen tidak jadi membeli dan underprice harga jauh di bawah market). 
+- The model effectively predicts house prices within specified feature boundaries.
+- RMSE and MAE are large but acceptable due to the wide target variable range.
+- MAPE of 17% indicates the model's high accuracy in predicting house prices.
+- Feature importance analysis identifies 'Median Income' and 'Ocean Proximity' as key factors.
 
 **Recommendations**
-
-1. Penambahan fitur data dapat menjadi langkah yang signifikan untuk meningkatkan performa model prediksi harga rumah. Berikut adalah beberapa ide penambahan fitur yang dapat dipertimbangkan:
-    - Rasio Kamar Tidur terhadap Jumlah Kamar: Menambahkan fitur yang mencerminkan rasio kamar tidur terhadap jumlah total kamar bisa memberikan wawasan tentang seberapa besar rasio ruang tidur terhadap ruang umum. Ini dapat memberikan informasi tambahan tentang tata letak dan proporsi rumah.
-     - Luas Bangunan per Luas Tanah: Menambahkan fitur yang mencerminkan rasio luas bangunan terhadap luas tanah dapat memberikan informasi tentang sejauh mana tanah digunakan dan memungkinkan model memperhitungkan efisiensi penggunaan lahan.
-     - Fasilitas Umum di Sekitar: Menambahkan fitur yang mencantumkan jarak ke fasilitas umum seperti sekolah, pusat perbelanjaan, atau rumah sakit dapat memberikan gambaran tentang kepraktisan lokasi properti dan memengaruhi harga.
-     - Pertumbuhan Ekonomi Daerah: Menyertakan indikator pertumbuhan ekonomi di daerah tersebut, seperti pembangunan baru atau proyek-proyek infrastruktur, dapat memberikan pemahaman tentang potensi kenaikan nilai properti di masa depan.
-     - Pendekatan Jarak ke Pusat Kota: Menambahkan fitur yang mencerminkan jarak relatif ke pusat kota atau pusat bisnis dapat memberikan informasi tentang seberapa strategis lokasi properti.
-     - Indeks Kualitas Hidup: Jika data tersedia, fitur yang mencerminkan indeks kualitas hidup di daerah tersebut dapat menjadi faktor penting dalam menentukan harga rumah.
-     - Fitur Interaksi Antara Variabel: Eksplorasi fitur interaksi antara variabel-variabel utama, seperti produk atau rasio antara dua fitur, untuk melihat apakah ada hubungan yang lebih kompleks yang dapat ditemukan.
-2. Menyelidiki prediksi dengan nilai error yang signifikan, kita dapat mengkategorikan error tersebut ke dalam dua grup, yaitu overestimation (penilaian terlalu tinggi) dan underestimation (penilaian terlalu rendah). Kita akan memilih 5% prediksi dengan error terbesar dari masing-masing grup untuk dianalisis lebih lanjut. Sementara itu, 90% prediksi dengan error mendekati nilai rata-rata akan membentuk grup mayoritas. Langkah selanjutnya adalah mengevaluasi hubungan antara error dan setiap variabel independen. Analisis ini akan memberikan wawasan tentang variabel mana dan aspek apa yang mempengaruhi model menghasilkan error tinggi. Dengan pemahaman ini, dapat dilakukan pelatihan ulang dengan penerapan teknik feature engineering yang lebih baik untuk meningkatkan kinerja model.
-3. Untuk meningkatkan jumlah data, bisa dilakukan pengumpulan data tambahan. Jika ingin mengevaluasi model yang lebih kompleks, misalnya menggunakan recursive neural networks (RNN), tetapi perlu diingat bahwa jika jumlah data dan fitur tetap seperti dataset saat ini, perubahan mungkin tidak signifikan.
+1. Adding additional features like bedroom-to-room ratio, building area per land area, nearby public facilities, economic growth indicators, distance to city center, and life quality index could enhance model performance.
+2. Investigate high-error predictions by analyzing overestimation and underestimation groups.
+3. Consider collecting more data and exploring advanced models like RNNs if sufficient data is available.
 
 ---
 
-# **Langkah 5: Save Model**
+# **Step 5: Save Model**
 
 ---
-Setelah model yang dibangun selesai, model disimpan ke dalam file menggunakan modul pickle. Model disimpan dalam format file yang dapat digunakan kembali nanti.
+After completing the model, it is saved using the pickle module in a reusable format.
+
